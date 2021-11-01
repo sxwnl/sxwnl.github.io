@@ -1,2 +1,2 @@
 # sxwnl.github.io
-sxwnl single statis html
+sxwnl single static html
