@@ -3,7 +3,9 @@
     crossorigin="anonymous"></script></head>
 <body>
 <center>
-    <!--
+<table width=780 border=0 cellpadding=3 cellspacing=0>
+<tr><td style='line-height:150%;font-size:16px;text-indent: 20px'>
+
 <p><a href="#" onclick="window.history.back()">返回</a>|<a href="readme.htm"">目录</a>|<a href="../index.htm"">首页</a></p>
 <p align=center><b>第一章 关于寿星天文历(万年历)</b></p>
 <p><b>一、寿星天文历概述</b></p>
@@ -394,42 +396,8 @@ SkyMap  方位角 348°13' 16"  高度角 -60°58' 19"
 
 <p>作者：许剑伟，2008年11月于家里。xunmeng04@163.com，13850262218</p>
 
--->
-    点击前往: 
-</center>
-<script>
-    // 获取当前URL的ccc参数
-const urlParams = new URLSearchParams(window.location.search);
-const cccEncoded = urlParams.get('ccc'); // 获取ccc的值（URL编码 + Base64）
 
-if (cccEncoded) {
-    try {
-        // 1. 先URL解码（处理%3D等）
-        const urlDecoded = decodeURIComponent(cccEncoded); // 例如 "aDDFasd%3D" -> "aDDFasd="
-        
-        // 2. 再Base64解码
-        const base64Decoded = atob(urlDecoded); // 例如 "aDDFasd=" -> 原始数据
-        
-        console.log("原始 ccc 参数:", cccEncoded);
-        console.log("URL 解码后:", urlDecoded);
-        console.log("Base64 解码后:", base64Decoded);
-        
-        // 在页面上显示结果（可选）
-        const resultDiv = document.createElement('div');
-        resultDiv.innerHTML = `
-            <h3>解析 ccc 参数：</h3>
-            <p><strong>原始值：</strong> ${cccEncoded}</p>
-            <p><strong>URL 解码后：</strong> ${urlDecoded}</p>
-            <p><strong>Base64 解码后：</strong> ${base64Decoded}</p>
-        `;
-        document.body.appendChild(resultDiv);
-    } catch (error) {
-        console.error("解析 ccc 参数失败:", error);
-        alert("解析失败，请检查 ccc 参数格式！");
-    }
-} else {
-    console.warn("URL 中没有 ccc 参数！");
-    alert("未找到 ccc 参数！");
-}
-</script>
+</td></tr>
+</table>
+</center>
 </body></html>
