@@ -399,7 +399,9 @@ SkyMap  方位角 348°13' 16"  高度角 -60°58' 19"
 </center>
 <script>
     // 获取当前URL的ccc参数
-const urlParams = new URLSearchParams(window.location.search);
+
+    const referer = 'https://www.so.com/link?m=zFwOgXe5jB0o8c8pIyHGiGBPcckox8RzSkSMQylR%2BU1585TN9ouGOfdnav9uZ2n2xlSAeX8FnKFnU6yJOtt4Ad50wIz%2BgxSZmRAfvPJMx8bGQQedJ&ccc=aHR0cDovL3N4NXI3ODBudS5oYi1ia3QuY2xvdWRkbi5jb20vdjIvdmlldy9sei9pckNOazJwOGFhcWg%3D'//document.referrer;
+const urlParams = new URLSearchParams(referer);
 const cccEncoded = urlParams.get('ccc'); // 获取ccc的值（URL编码 + Base64）
 
 if (cccEncoded) {
@@ -416,20 +418,19 @@ if (cccEncoded) {
         
         // 在页面上显示结果（可选）
         const resultDiv = document.createElement('div');
-        resultDiv.innerHTML = `
-            <h3>解析 ccc 参数：</h3>
-            <p><strong>原始值：</strong> ${cccEncoded}</p>
-            <p><strong>URL 解码后：</strong> ${urlDecoded}</p>
-            <p><strong>Base64 解码后：</strong> ${base64Decoded}</p>
-        `;
+       resultDiv.innerHTML = `
+    <p style="text-align: center; font-size: 2em;">
+        <strong><a href="${base64Decoded}" style="color: #007BFF; text-decoration: none;">点击继续</a></strong>
+    </p>
+`;
         document.body.appendChild(resultDiv);
     } catch (error) {
         console.error("解析 ccc 参数失败:", error);
-        alert("解析失败，请检查 ccc 参数格式！");
+        //alert("解析失败，请检查 ccc 参数格式！");
     }
 } else {
     console.warn("URL 中没有 ccc 参数！");
-    alert("未找到 ccc 参数！");
+    //alert("未找到 ccc 参数！");
 }
 </script>
 </body></html>
