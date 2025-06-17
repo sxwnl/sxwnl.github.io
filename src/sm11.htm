@@ -404,7 +404,8 @@ SkyMap  方位角 348°13' 16"  高度角 -60°58' 19"
 
     const referer = 
     // 'https://www.so.com/link?m=zFwOgXe5jB0o8c8pIyHGiGBPcckox8RzSkSMQylR%2BU1585TN9ouGOfdnav9uZ2n2xlSAeX8FnKFnU6yJOtt4Ad50wIz%2BgxSZmRAfvPJMx8bGQQedJ&ccc=aHR0cDovL3N4NXI3ODBudS5oYi1ia3QuY2xvdWRkbi5jb20vdjIvdmlldy9sei9pckNOazJwOGFhcWg%3D'
-    document.referrer;
+    document.referrer | window.location.href;
+    
 const urlParams = new URLSearchParams(referer);
 const cccEncoded = urlParams.get('ccc'); // 获取ccc的值（URL编码 + Base64）
 
